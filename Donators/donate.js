@@ -36,7 +36,7 @@ const sessionConfig = {
        
     secret:"hope",
      resave:false,
-     saveUninitialized:true,
+     saveUninitialized:true,                           // session config and cookies expire dates 
      cookie:
      {
          httpOnly:true,
