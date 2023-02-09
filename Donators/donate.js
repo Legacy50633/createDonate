@@ -63,12 +63,12 @@ app.use('/',creatorRoutes)
 
 
 
-app.all("*",(req,res,next)=>{
+app.all("*",(req,res,next)=>{                                          // trigerred when ever the req route doesn't match any of the above routes
 next(new ExpressError("page not found"),404)
 })
 
 app.use( (err,req,res,next)=>{
-    const{message="Something went wrong",statusCode= 500} = err
+    const{message="Something went wrong",statusCode= 500} = err        // basic error handler 
 res.status(statusCode).send(message)
 })
 
